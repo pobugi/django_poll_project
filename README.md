@@ -1,6 +1,10 @@
 DJANGO Poll App
 
-To launch:
+The application functionality:
+To create, edit, delete polls. It allows also to poll. 
+User/admin authorization feature is coming soon.
+
+To launch the application:
 1. Clone repository
 2. Change current directory
 3. Create virtual environment and activate it: 

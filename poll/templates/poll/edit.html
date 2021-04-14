@@ -1,0 +1,62 @@
+{% extends "poll/base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Edit Poll{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Edit Poll</h3>
+            </div>
+                
+            <form method="POST">
+                {% csrf_token %}
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Edit Poll:</label>
+                                <input type="text" name="question" id="question" class="form-control" value="{{poll.question}}"></input>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="option1">Edit Option 1</label>
+                                <!-- {% render_field form.option_1 class="form-control" value=poll.option_1 %} -->
+                                <input type="text" name="option1" id="option1" class="form-control" value="{{poll.option_1}}" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="option2">Edit Option 2</label>
+                                <!-- {% render_field form.option_2 class="form-control" value=poll.option_2 %} -->
+                                <input type="text" name="option2" id="option2" class="form-control" value="{{poll.option_2}}" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="option3">Edit Option 3</label>
+                                <!-- {% render_field form.option_3 class="form-control" value=poll.option_3 %} -->
+                                <input type="text" name="option3" id="option3" class="form-control" value="{{poll.option_3}}" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <hr />
+                        <div class="col-lg-4">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

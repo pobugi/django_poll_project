@@ -1,7 +1,7 @@
 DJANGO Poll App
 
 The application functionality:
-To create, edit, delete polls. It allows also to poll. 
+To create, edit, delete polls. It allows also to vote. 
 User/admin authorization feature is coming soon.
 
 To launch the application:
